@@ -36,11 +36,11 @@ section {
 	align-items: center;
 	justify-content: center;
 	height: 500px;
-	background-image: url("drone-image.jpg");
+	background-image: url(images/drone-image.png);
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-	color: #fff;
+	color: #e71212;
 }
 
 section h2 {

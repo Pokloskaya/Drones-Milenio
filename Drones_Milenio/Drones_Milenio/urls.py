@@ -20,5 +20,6 @@ import Drones_MilenioApp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Drones_MilenioApp.views.home)
+    path('', Drones_MilenioApp.views.home),
+    path('test/', Drones_MilenioApp.views.test),
 ]
