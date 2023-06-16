@@ -1,7 +1,5 @@
 """Drones_Milenio URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,8 +17,9 @@ from django.urls import include
 import Drones_MilenioApp.views as views
 
 urlpatterns = [
-    path('', views.home),
     path('admin/', admin.site.urls),
+    path('', views.home),
+    path('react-app/', views.react_app),
     path('test/', views.test),
     path('login/', views.login),
 ]
