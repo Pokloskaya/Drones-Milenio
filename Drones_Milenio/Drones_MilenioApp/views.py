@@ -12,12 +12,24 @@ def react_app(request): #TENGO QUE MIRAR QUE PASA SIN EL try EXCEPT, REVISAR AL 
             return HttpResponse(file.read())
     except FileNotFoundError:
         return HttpResponseNotFound("The React app build files were not found.")
-
-def home(request):
-    return render(request, 'home.html')
+    
+def home(request): 
+    try:
+        with open(settings.BASE_DIR / 'frontend/build/home.html') as file:
+            return HttpResponse(file.read())
+    except FileNotFoundError:
+        return HttpResponseNotFound("The React app build files were not found.")
 
 def login(request):
-    return render(request, 'login.html')
+    try:
+        with open(settings.BASE_DIR / 'frontend/build/login.html') as file:
+            return HttpResponse(file.read())
+    except FileNotFoundError:
+        return HttpResponseNotFound("The React app build files were not found.")
 
 def test(request):
-    return render(request, 'test.html')
+    try:
+        with open(settings.BASE_DIR / 'frontend/build/test.html') as file:
+            return HttpResponse(file.read())
+    except FileNotFoundError:
+        return HttpResponseNotFound("The React app build files were not found.")
